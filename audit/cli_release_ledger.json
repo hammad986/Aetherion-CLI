@@ -1,0 +1,102 @@
+{
+  "release_id": "aetherion-cli-v1.0.0-release",
+  "version": "1.0.0",
+  "status": "CERTIFIED_PRODUCTION_READY",
+  "certified_at": "2026-09-10T20:07:30Z",
+  "target_workspace": "C:\\Users\\mdham\\Downloads\\Aetherion-AI-main\\end to end aetherion cli",
+  "components": {
+    "cli": {
+      "package": "aetherion-cli",
+      "version": "1.0.0",
+      "test_results": "159 passed, 0 failed, 0 warnings",
+      "wheel_artifact": "cli/dist/aetherion-1.0.0-py3-none-any.whl",
+      "sdist_artifact": "cli/dist/aetherion-1.0.0.tar.gz",
+      "features": [
+        "Interactive TUI (Textual)",
+        "RFC 8628 Device Authorization Flow",
+        "Sensitive credential redaction (tokens, DSNs, Bearer)",
+        "Standardized JSON output envelopes",
+        "Multi-workspace identity management",
+        "Durable task execution & cancel-wins coordination",
+        "Doctor diagnostic report"
+      ]
+    },
+    "backend": {
+      "runtime": "Flask + Gunicorn / WSGI",
+      "environment_modes": ["local-development", "CI-test", "staging", "production"],
+      "fail_closed_posture": "Strict in production/staging (PostgreSQL mandatory, Redis mandatory, high-entropy secrets)",
+      "endpoints_verified": [
+        "/api/health",
+        "/api/v2/health",
+        "/api/auth/signup",
+        "/api/auth/login",
+        "/api/auth/logout",
+        "/api/auth/me",
+        "/api/auth/refresh",
+        "/api/auth/device/request",
+        "/api/auth/device/poll",
+        "/api/auth/device/confirm",
+        "/api/auth/device/deny",
+        "/api/auth/forgot-password",
+        "/api/auth/reset-password",
+        "/api/sessions",
+        "/api/sessions/create",
+        "/api/session/<id>",
+        "/api/tasks",
+        "/api/task/<id>",
+        "/api/task/<id>/stop",
+        "/api/task/<id>/retry",
+        "/api/task/<id>/approve",
+        "/api/task/<id>/logs",
+        "/api/artifacts/<id>",
+        "/api/diff/<id>",
+        "/api/replay/<id>"
+      ]
+    },
+    "frontend_auth": {
+      "stack": "Vite 6 + React 19 + Tailwind CSS 4",
+      "bundle_size": "296.78 kB JS / 19.88 kB CSS",
+      "build_status": "Clean production build (dist/)",
+      "surfaces": [
+        "Login (/login)",
+        "Register (/register)",
+        "Device Code Activation (/activate, /device)",
+        "Account Recovery (/recovery, /reset-password)",
+        "Logout (/logout)",
+        "Terms (/terms)",
+        "Privacy (/privacy)"
+      ]
+    },
+    "deploy": {
+      "docker": [
+        "deploy/docker/Dockerfile.backend",
+        "deploy/docker/Dockerfile.frontend-auth"
+      ],
+      "compose": "deploy/compose/docker-compose.yml",
+      "k8s": [
+        "deploy/k8s/namespace.yaml",
+        "deploy/k8s/configmap.yaml",
+        "deploy/k8s/secrets.yaml",
+        "deploy/k8s/backend.yaml",
+        "deploy/k8s/frontend-auth.yaml",
+        "deploy/k8s/ingress.yaml"
+      ]
+    },
+    "scripts": [
+      "scripts/production_preflight.py",
+      "scripts/db_migrate.py",
+      "scripts/db_backup.py",
+      "scripts/db_restore_verify.py",
+      "scripts/generate_release_manifest.py"
+    ]
+  },
+  "contamination_audit": {
+    "populated_env_secrets": 0,
+    "sqlite_database_files": 0,
+    "node_modules_directories": 0,
+    "python_virtual_envs": 0,
+    "python_bytecode_cache": 0,
+    "legacy_log_files": 0,
+    "status": "PASSED_ZERO_CONTAMINATION"
+  }
+}

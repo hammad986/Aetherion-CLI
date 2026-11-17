@@ -1,0 +1,196 @@
+# =============================================================================
+# AETHERION PREFLIGHT DOCKER COMPOSE CONFIGURATION (Isolated Preflight Stack)
+# =============================================================================
+# Project: aetherion-preflight-20261010-final1
+# Strict Isolation:
+# 1. Dedicated disposable volumes (postgres_preflight_data, redis_preflight_data, workspace_preflight_data)
+# 2. Dedicated project network (aetherion_preflight_net)
+# 3. Dedicated container names (aetherion-*-preflight)
+# 4. Host bindings: Backend 127.0.0.1:5050:5000, Frontend 127.0.0.1:3030:8080
+# 5. Database & Redis have NO host ports published (internal-only)
+# 6. Uses exact verified candidate images (no build blocks)
+# =============================================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aetherion-postgres-preflight
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aetherion_preflight
+      POSTGRES_USER: aetherion_preflight_user
+      POSTGRES_PASSWORD: "${PREFLIGHT_POSTGRES_PASSWORD:?Error: PREFLIGHT_POSTGRES_PASSWORD must be configured}"
+    volumes:
+      - postgres_preflight_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aetherion_preflight_user -d aetherion_preflight"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - aetherion_preflight_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: aetherion-redis-preflight
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "512mb", "--maxmemory-policy", "volatile-lru"]
+    volumes:
+      - redis_preflight_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - aetherion_preflight_net
+
+  db-migrate:
+    image: aetherion-backend:prod-candidate-20261010-r2-final1
+    container_name: aetherion-db-migrate-preflight
+    restart: "no"
+    working_dir: /app/workspace
+    environment:
+      ENVIRONMENT: production
+      AETHERION_RELEASE_SCOPE: control-plane
+      AETHERION_EXECUTION_DISABLED: "1"
+      DATABASE_URL: postgresql://aetherion_preflight_user:${PREFLIGHT_POSTGRES_PASSWORD}@postgres:5432/aetherion_preflight
+      PYTHONPATH: /app
+      SECRET_KEY: "${PREFLIGHT_SECRET_KEY:?Error: PREFLIGHT_SECRET_KEY must be configured}"
+      JWT_SECRET: "${PREFLIGHT_JWT_SECRET:?Error: PREFLIGHT_JWT_SECRET must be configured}"
+    volumes:
+      - workspace_preflight_data:/app/workspace
+    command: ["python", "/app/scripts/db_migrate.py", "--up"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - aetherion_preflight_net
+
+  backend:
+    image: aetherion-backend:prod-candidate-20261010-r2-final1
+    container_name: aetherion-backend-preflight
+    restart: unless-stopped
+    working_dir: /app/workspace
+    environment:
+      ENVIRONMENT: production
+      AETHERION_RELEASE_SCOPE: control-plane
+      AETHERION_EXECUTION_DISABLED: "1"
+      PORT: 5000
+      PYTHONPATH: /app
+      SECRET_KEY: "${PREFLIGHT_SECRET_KEY:?Error: PREFLIGHT_SECRET_KEY must be configured}"
+      JWT_SECRET: "${PREFLIGHT_JWT_SECRET:?Error: PREFLIGHT_JWT_SECRET must be configured}"
+      DATABASE_URL: postgresql://aetherion_preflight_user:${PREFLIGHT_POSTGRES_PASSWORD}@postgres:5432/aetherion_preflight
+      REDIS_URL: redis://redis:6379/0
+      ALLOWED_ORIGINS: http://localhost:3030
+      RUNNER_CONTAINER: 1
+      SERVER_URL: https://preflight.aetherion.local
+    ports:
+      - "127.0.0.1:5050:5000"
+    volumes:
+      - workspace_preflight_data:/app/workspace
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      db-migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health/control-plane"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - aetherion_preflight_net
+
+  frontend-auth:
+    image: aetherion-frontend-auth:prod-candidate-20261010-r2
+    container_name: aetherion-frontend-auth-preflight
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3030:8080"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    networks:
+      - aetherion_preflight_net
+
+  worker-a:
+    image: aetherion-worker:prod-candidate-20261010-r2-final1
+    container_name: aetherion-worker-a-preflight
+    restart: unless-stopped
+    working_dir: /app/workspace
+    environment:
+      ENVIRONMENT: production
+      AETHERION_RELEASE_SCOPE: control-plane
+      AETHERION_EXECUTION_DISABLED: "1"
+      WORKER_ID: worker-a-preflight
+      MAX_CONCURRENCY: 4
+      CAPABILITIES: DEFAULT,CPU
+      DATABASE_URL: postgresql://aetherion_preflight_user:${PREFLIGHT_POSTGRES_PASSWORD}@postgres:5432/aetherion_preflight
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: "${PREFLIGHT_SECRET_KEY:?Error: PREFLIGHT_SECRET_KEY must be configured}"
+      JWT_SECRET: "${PREFLIGHT_JWT_SECRET:?Error: PREFLIGHT_JWT_SECRET must be configured}"
+      SERVER_URL: https://preflight.aetherion.local
+      PYTHONPATH: /app/backend:/app/cli
+    volumes:
+      - workspace_preflight_data:/app/workspace
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - aetherion_preflight_net
+
+  worker-b:
+    image: aetherion-worker:prod-candidate-20261010-r2-final1
+    container_name: aetherion-worker-b-preflight
+    restart: unless-stopped
+    working_dir: /app/workspace
+    environment:
+      ENVIRONMENT: production
+      AETHERION_RELEASE_SCOPE: control-plane
+      AETHERION_EXECUTION_DISABLED: "1"
+      WORKER_ID: worker-b-preflight
+      MAX_CONCURRENCY: 4
+      CAPABILITIES: DEFAULT,CPU
+      DATABASE_URL: postgresql://aetherion_preflight_user:${PREFLIGHT_POSTGRES_PASSWORD}@postgres:5432/aetherion_preflight
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: "${PREFLIGHT_SECRET_KEY:?Error: PREFLIGHT_SECRET_KEY must be configured}"
+      JWT_SECRET: "${PREFLIGHT_JWT_SECRET:?Error: PREFLIGHT_JWT_SECRET must be configured}"
+      SERVER_URL: https://preflight.aetherion.local
+      PYTHONPATH: /app/backend:/app/cli
+    volumes:
+      - workspace_preflight_data:/app/workspace
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - aetherion_preflight_net
+
+volumes:
+  postgres_preflight_data:
+    driver: local
+  redis_preflight_data:
+    driver: local
+  workspace_preflight_data:
+    driver: local
+
+networks:
+  aetherion_preflight_net:
+    driver: bridge

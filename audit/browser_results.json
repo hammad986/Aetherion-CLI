@@ -1,0 +1,197 @@
+[
+  {
+    "test": "Asset & Bundle Loading",
+    "status": "PASS",
+    "detail": "Console errors: 0, Failed network: 0"
+  },
+  {
+    "test": "Signup Redirect",
+    "status": "PASS",
+    "detail": "Redirected to http://127.0.0.1:3000/login?registered=1"
+  },
+  {
+    "test": "SQLite User Persistence",
+    "status": "PASS",
+    "detail": "Found user in SQLite: (27, 'uat_user_306a7d5d@example.com', 0)"
+  },
+  {
+    "test": "Duplicate Account Rejection",
+    "status": "PASS",
+    "detail": "Duplicate error displayed: 'Email already registered'"
+  },
+  {
+    "test": "Invalid Password Rejection",
+    "status": "PASS",
+    "detail": "Error: 'Invalid credentials'"
+  },
+  {
+    "test": "Unknown Account Rejection",
+    "status": "PASS",
+    "detail": "Error: 'Invalid credentials'"
+  },
+  {
+    "test": "JWT Storage in localStorage",
+    "status": "PASS",
+    "detail": "Token present (length 287)"
+  },
+  {
+    "test": "Authenticated Identity Portal Display",
+    "status": "PASS",
+    "detail": "Email uat_user_306a7d5d@example.com found in portal view"
+  },
+  {
+    "test": "Session Persistence Across Refresh",
+    "status": "PASS",
+    "detail": "Token persisted across browser reload"
+  },
+  {
+    "test": "Device Code Pre-filled",
+    "status": "PASS",
+    "detail": "Pre-filled code: '3DCZ-3Q6A' matches '3DCZ-3Q6A'"
+  },
+  {
+    "test": "Device Authorization Success Screen",
+    "status": "PASS",
+    "detail": "Device Authorized message rendered"
+  },
+  {
+    "test": "Device Code Poll Status Verified",
+    "status": "PASS",
+    "detail": "Poll result: status=authorized, token_issued=False"
+  },
+  {
+    "test": "Device Denial Screen",
+    "status": "PASS",
+    "detail": "Authorization Denied screen rendered"
+  },
+  {
+    "test": "Device Denial Backend State",
+    "status": "PASS",
+    "detail": "Status: denied"
+  },
+  {
+    "test": "Password Recovery Request Dispatched",
+    "status": "PASS",
+    "detail": "Message: 'If that email exists, a reset link has been sent.'"
+  },
+  {
+    "test": "Reset Token Stored in DB",
+    "status": "PASS",
+    "detail": "Token registered for uid=27"
+  },
+  {
+    "test": "Password Reset Success",
+    "status": "PASS",
+    "detail": "Message: 'Password has been reset. Please sign in with your new password.'"
+  },
+  {
+    "test": "Login with New Password",
+    "status": "PASS",
+    "detail": "Successfully logged in with new password"
+  },
+  {
+    "test": "Old Password Rejected",
+    "status": "PASS",
+    "detail": "Error: 'Invalid credentials'"
+  },
+  {
+    "test": "Token Cleared on Logout",
+    "status": "PASS",
+    "detail": "localStorage aetherion_token is None"
+  },
+  {
+    "test": "Unauthenticated Navigation Protected",
+    "status": "PASS",
+    "detail": "Redirected to /login"
+  },
+  {
+    "test": "Terms Page Render",
+    "status": "PASS",
+    "detail": "Terms content rendered"
+  },
+  {
+    "test": "Privacy Page Render",
+    "status": "PASS",
+    "detail": "Privacy content rendered"
+  },
+  {
+    "test": "Responsive Viewport Desktop_1440 (1440x900)",
+    "status": "PASS",
+    "detail": "Rendered cleanly with submit box {'x': 529, 'y': 469.5, 'width': 382, 'height': 40}"
+  },
+  {
+    "test": "Responsive Viewport Desktop_1280 (1280x720)",
+    "status": "PASS",
+    "detail": "Rendered cleanly with submit box {'x': 449, 'y': 379.5, 'width': 382, 'height': 40}"
+  },
+  {
+    "test": "Responsive Viewport Tablet_1024 (1024x768)",
+    "status": "PASS",
+    "detail": "Rendered cleanly with submit box {'x': 321, 'y': 403.5, 'width': 382, 'height': 40}"
+  },
+  {
+    "test": "Responsive Viewport Mobile_iPhone12_390 (390x844)",
+    "status": "PASS",
+    "detail": "Rendered cleanly with submit box {'x': 49, 'y': 441.5, 'width': 292, 'height': 40}"
+  },
+  {
+    "test": "Responsive Viewport Mobile_iPhone14ProMax_430 (430x932)",
+    "status": "PASS",
+    "detail": "Rendered cleanly with submit box {'x': 49, 'y': 485.5, 'width': 332, 'height': 40}"
+  },
+  {
+    "test": "Initial Keyboard Focus",
+    "status": "PASS",
+    "detail": "Focused on INPUT:email"
+  },
+  {
+    "test": "Keyboard Tab Navigation",
+    "status": "PASS",
+    "detail": "Tabbed successfully to A (href=/recovery)"
+  },
+  {
+    "test": "Google OAuth Button Click",
+    "status": "PASS",
+    "detail": "Navigated towards: https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S757772466%3..."
+  },
+  {
+    "test": "Google OAuth Parameters Validated",
+    "status": "PASS",
+    "detail": "client_id=1044392167420-mi..., state=acc2856245..."
+  },
+  {
+    "test": "OAuth Denied Consent Error Display",
+    "status": "PASS",
+    "detail": "Visible error: 'Authentication error: access_denied'"
+  },
+  {
+    "test": "OAuth Forged State Rejection",
+    "status": "PASS",
+    "detail": "Visible error: 'Authentication error: invalid_state'"
+  },
+  {
+    "test": "OAuth Token Exchange Failure Handling",
+    "status": "PASS",
+    "detail": "Visible error: 'Authentication error: invalid_state'"
+  },
+  {
+    "test": "OAuth JWT Token Stored in Browser",
+    "status": "PASS",
+    "detail": "Token active in localStorage"
+  },
+  {
+    "test": "OAuth Identity Portal Displays User",
+    "status": "PASS",
+    "detail": "Email google_operator_0e5ef8@example.com rendered"
+  },
+  {
+    "test": "OAuth Session Logout",
+    "status": "PASS",
+    "detail": "Token wiped on logout"
+  },
+  {
+    "test": "OAuth Repeat Login for Existing Account",
+    "status": "PASS",
+    "detail": "Existing account re-entry successful"
+  }
+]

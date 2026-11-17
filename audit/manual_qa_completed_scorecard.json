@@ -1,0 +1,318 @@
+{
+  "suite": "Aetherion CLI/TUI Full Manual QA Automated Suite",
+  "timestamp": "2026-09-13T17:49:20Z",
+  "summary": {
+    "total": 34,
+    "passed": 34,
+    "failed": 0,
+    "pass_rate": "100.0%"
+  },
+  "tests": [
+    {
+      "id": "PREREQ-01",
+      "action": "py -0p and python --version in clean sandbox",
+      "expected": "Python 3.10+ detected inside clean venv",
+      "actual": "Python 3.12.10",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "BACKEND-01",
+      "action": "python app.py on port 5000",
+      "expected": "Server boots and responds 200 on /api/health",
+      "actual": "Backend listening on http://127.0.0.1:5000 (ready=True)",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "API-01",
+      "action": "Invoke-RestMethod /api/health",
+      "expected": "Returns {ok: True, status: 'ok', version: '1.0.0'}",
+      "actual": "{\"environment\": \"local-development\", \"metrics\": {\"cpu_pct\": 0.0, \"mem_pct\": 96.2}, \"ok\": true, \"runner_isolation\": \"process\", \"service\": \"aetherion-backend\", \"status\": \"ok\", \"ts\": \"2026-09-13T17:48:23.239369+00:00\", \"version\": \"1.0.0\"}",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "API-02",
+      "action": "Invoke-RestMethod /readyz",
+      "expected": "Returns 200 with ready status",
+      "actual": "{\"checks\": {\"database\": {\"detail\": \"Data store operational\", \"ok\": true, \"required\": false}, \"environment\": {\"detail\": \"local-development\", \"ok\": true, \"required\": true}}, \"status\": \"ready\"}",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "API-03",
+      "action": "Invoke-RestMethod /livez",
+      "expected": "Returns 200 with ok liveness status",
+      "actual": "{\"pid\": 10288, \"status\": \"ok\", \"uptime_seconds\": 0.158628}",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "CONFIG-01",
+      "action": "aetherion config set server_url http://127.0.0.1:5000",
+      "expected": "Server URL saved successfully",
+      "actual": "\u2713 Set server_url = http://127.0.0.1:5000",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "CONFIG-02",
+      "action": "aetherion config show",
+      "expected": "Configuration table shown with active URL",
+      "actual": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Aetherion CLI Configuration \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Server URL:     http://127.0.0.1:5000                 \u2502\n\u2502 Default model:  claude-3-5-sonnet                     \u2502\n\u2502 Output format:  table                                 \u2502\n\u2502 Token set:      Yes                                   \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "CONFIG-03",
+      "action": "aetherion config set default_model claude-3-5-sonnet",
+      "expected": "Default model saved successfully",
+      "actual": "\u2713 Set default_model = claude-3-5-sonnet",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "CONFIG-04",
+      "action": "aetherion config show (verify model)",
+      "expected": "Configuration displays claude-3-5-sonnet",
+      "actual": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Aetherion CLI Configuration \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Server URL:     http://127.0.0.1:5000                 \u2502\n\u2502 Default model:  claude-3-5-sonnet                     \u2502\n\u2502 Output format:  table                                 \u2502\n\u2502 Token set:      Yes                                   \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-01",
+      "action": "aetherion doctor (online backend)",
+      "expected": "Backend reachable, version 1.0.0, exit code 0",
+      "actual": "Backend URL: http://127.0.0.1:5000\nOK Backend reachable  (version 1.0.0)\n! No token set.  Run `aetherion login`.\nOK Python 3.12.10\nConfig: C:\\Users\\mdham\\.aetherion\\config.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-02",
+      "action": "Register user operator_6c5a79@aetherion.ai via /register",
+      "expected": "Returns 201 or 200 with user account created",
+      "actual": "{\"access_token\": \"[REDACTED_JWT_TOKEN]\", \"expires_in\": 900, \"message\": \"Account created\", \"ok\": true, \"session_id\": \"b9d7f89e-35e2-4a30-866a-7d01c9e760bf\"}",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-03",
+      "action": "aetherion auth login --email operator_6c5a79@aetherion.ai --password <REDACTED>",
+      "expected": "Stored in keyring, zero secret leak, exit code 0",
+      "actual": "\u2713 Successfully logged in as operator_6c5a79@aetherion.ai\n  Token stored in keyring",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-04",
+      "action": "aetherion whoami",
+      "expected": "Profile card rendered with user details",
+      "actual": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Your Profile \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Email:  operator_6c5a79@aetherion.ai \u2502\n\u2502 Name:   QA Operator                  \u2502\n\u2502 Role:   user                         \u2502\n\u2502 ID:     1                            \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-05",
+      "action": "aetherion auth status",
+      "expected": "Displays authenticated status without exposing raw token",
+      "actual": "\u2713 Authenticated as QA Operator (Role: user)\n  Storage: KEYRING\n  Masked Token: eyJh...v23o",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-06",
+      "action": "RFC 8628 Device Flow (Request -> Poll: Pending -> Confirm -> Poll: Authorized)",
+      "expected": "Device authorization flow transitions from pending to authorized with JWT",
+      "actual": "User Code: RGWB-BMNM, Pending: pending, Confirmed: True, Authorized: authorized",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-07",
+      "action": "aetherion auth sessions",
+      "expected": "Active sessions listed without error",
+      "actual": "Active Device Sessions                             \n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Session ID   \u2502 Device / IP                            \u2502 Created             \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 4a57564a-e77 \u2502 Aetherion CLI/TUI Device Auth          \u2502 2026-09-13 17:48:39 \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "AUTH-08",
+      "action": "aetherion auth logout (and verify credentials cleared)",
+      "expected": "Keyring erased; subsequent whoami fails with exit code 1",
+      "actual": "\u2713 Logged out successfully. Local credentials purged.\n\u2717 Not authenticated.  Run aetherion login first.",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "WS-01",
+      "action": "aetherion workspace create manual-ws-172a8c --json",
+      "expected": "Returns standard JSON envelope with workspace ID",
+      "actual": "{\n  \"ok\": true,\n  \"timestamp\": \"2026-09-13T17:48:44.129759+00:00\",\n  \"correlation_id\": \"936dc4e9-4250-4b88-a845-6e043a305d5e\",\n  \"data\": {",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "WS-02",
+      "action": "aetherion workspace list",
+      "expected": "Lists workspaces with active marker",
+      "actual": "Workspaces                                  \n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\u2502  Active  \u2502 Workspace ID            \u2502 Name                     \u2502 Status       \n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\u2502    *     \u2502 8b1fdb4c-e960-4d5c-ba2\u2026 \u2502 manual-ws-172a8c         \u2502 ready        ",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "WS-03",
+      "action": "aetherion workspace select 8b1fdb4c-e960-4d5c-ba20-89484471dfaa",
+      "expected": "Selected workspace confirmation displayed",
+      "actual": "\u2713 Selected workspace: 8b1fdb4c-e960-4d5c-ba20-89484471dfaa",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "WS-04",
+      "action": "aetherion workspace list --json",
+      "expected": "Returns JSON list of workspaces with active indicator",
+      "actual": "{\n  \"ok\": true,\n  \"timestamp\": \"2026-09-13T17:48:46.959336+00:00\",\n  \"correlation_id\": \"9dcbc622-5991-43d8-9134-cb0dad2c0f80\",\n  \"data\": [",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-01",
+      "action": "aetherion task create \"Build a lightweight telemetry collector with backpressure\" --json",
+      "expected": "Returns standard JSON envelope with durable task_id",
+      "actual": "{\n  \"ok\": true,\n  \"timestamp\": \"2026-09-13T17:48:48.884281+00:00\",\n  \"correlation_id\": \"a7d189ce-a713-4760-80ea-0dc245fb96bf\",\n  \"data\": {",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-02",
+      "action": "aetherion task status agent_task_d4910f66de87",
+      "expected": "Authoritative state fetched from backend (PENDING, Terminal: False)",
+      "actual": "Task agent_task_d4910f66de87                \n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Property         \u2502 Value                                \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Status           \u2502 PENDING                              \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-03",
+      "action": "aetherion task stop agent_task_d4910f66de87",
+      "expected": "Dispatches stop signal with cancel-wins semantics",
+      "actual": "\u2713 Cancellation signal dispatched for task: agent_task_d4910f66de87",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-04",
+      "action": "aetherion task status agent_task_d4910f66de87 (after stop)",
+      "expected": "State is permanently STOPPED, Terminal: True",
+      "actual": "Task agent_task_d4910f66de87                \n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Property         \u2502 Value                                \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Status           \u2502 STOPPED                              \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-05",
+      "action": "aetherion task retry agent_task_d4910f66de87",
+      "expected": "Task restarted successfully as new durable execution",
+      "actual": "\u2713 Task restarted successfully: agent_task_d4910f66de87",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TASK-06",
+      "action": "aetherion logs agent_task_d4910f66de87",
+      "expected": "Execution logs retrieved from durable store",
+      "actual": "[2026-09-13 17:48:48] Task agent_task_d4910f66de87 initialized.\nStatus: STOPPED",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "ART-01",
+      "action": "aetherion artifacts list",
+      "expected": "Artifact inventory table displayed",
+      "actual": "Generated Artifacts                        \n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Artifact ID \u2502 Name                     \u2502 Task / Session \u2502 Size \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "ART-02",
+      "action": "aetherion diff agent_task_d4910f66de87",
+      "expected": "Worktree diff displayed or clean empty message",
+      "actual": "No file modifications found for this task.",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "ART-03",
+      "action": "aetherion replay show agent_task_d4910f66de87",
+      "expected": "Replay ledger box rendered with execution metadata",
+      "actual": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Replay agent_task_d4910 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Execution: agent_task_d4910f66de87    \u2502\n\u2502 Session:   \u2014                          \u2502\n\u2502 Status:    ?                          \u2502\n\u2502 Events:    0   Frames: 0              \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "FAIL-01",
+      "action": "aetherion config show with NO_COLOR=1",
+      "expected": "High contrast output without ANSI escape codes",
+      "actual": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Aetherion CLI Configuration \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Server URL:     http://127.0.0.1:5000                 \u2502\n\u2502 Default model:  claude-3-5-sonnet                     \u2502\n\u2502 Output format:  table                                 \u2502\n\u2502 Token set:      Yes                                   \u2502",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TUI-01",
+      "action": "aetherion tui --help",
+      "expected": "Terminal UI options (--model, --session) displayed cleanly",
+      "actual": "Usage: aetherion tui [OPTIONS]\n  Launch the Aetherion interactive terminal workspace (TUI).\n  Full keyboard-driven AI workspace with session management, streaming chat,\n  command palette, context heatmap, and approval flows.\n  Examples:",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "TUI-02",
+      "action": "aetherion --help (converged commands verification)",
+      "expected": "All commands (artifacts, auth, config, diff, doctor, task, tui, workspace) present",
+      "actual": "Usage: aetherion [OPTIONS] [COMMAND] [ARGS]...\n  Aetherion AI Platform CLI \u2014 build anything with AI agents.\nOptions:\n  --version                       Show the version and exit.\n  -o, --output [table|json|plain]",
+      "exit_code": 0,
+      "status": "PASS",
+      "defect_id": "NONE"
+    },
+    {
+      "id": "FAIL-02",
+      "action": "aetherion doctor (with backend stopped)",
+      "expected": "Clean 'Backend unreachable' error message, exit code 1, no crash",
+      "actual": "Backend URL: http://127.0.0.1:5000\nX Backend unreachable \u2014 Cannot reach http://127.0.0.1:5000: [WinError 10061] No\nconnection could be made because the target machine actively refused it\n  Hint: Check your internet connection and server URL (`aetherion config \n--show`).",
+      "exit_code": 1,
+      "status": "PASS",
+      "defect_id": "NONE"
+    }
+  ]
+}

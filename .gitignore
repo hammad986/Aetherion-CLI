@@ -1,0 +1,133 @@
+# =============================================================================
+# Aetherion AI — Version Control Exclusions
+# =============================================================================
+# Rule of thumb: anything generated at runtime, anything secret, and anything
+# that is a by-product of a test/audit run must never be committed.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Secrets & local configuration  (NEVER commit a populated value)
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+deploy/production.env
+deploy/*.env
+!deploy/*.env.example
+deploy/compose/*.env
+!deploy/compose/*.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets/
+credentials.json
+*credentials*.json
+
+# -----------------------------------------------------------------------------
+# 2. Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+env/
+
+# -----------------------------------------------------------------------------
+# 3. Test / lint / type-check caches and result dumps
+# -----------------------------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+pytest_results.txt
+audit_results*.txt
+test-results/
+junit*.xml
+
+# -----------------------------------------------------------------------------
+# 4. Node.js & frontend build output
+# -----------------------------------------------------------------------------
+node_modules/
+frontend-auth/node_modules/
+frontend-auth/dist/
+dist/
+.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# 5. Databases & runtime data
+# -----------------------------------------------------------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+sessions.db
+saas_platform.db
+temp_concurrency.db
+
+# -----------------------------------------------------------------------------
+# 6. Runtime workspaces, agent worktrees & session state
+# -----------------------------------------------------------------------------
+/workspace/
+/workspaces/
+backend/workspace/
+.aetherion/
+.aetherion_worktrees/
+.aetherion_worktrees
+cli/.aetherion/
+temp_live_ws/
+temp_*/
+scratch/
+
+# -----------------------------------------------------------------------------
+# 7. Logs, temp files & editor/tooling noise
+# -----------------------------------------------------------------------------
+*.log
+logs/
+audit/logs/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+.vscode/
+.idea/
+.freebuff/
+*.code-workspace
+
+# -----------------------------------------------------------------------------
+# 8. OS metadata
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini

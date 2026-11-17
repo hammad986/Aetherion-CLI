@@ -1,0 +1,1904 @@
+{
+  "verified_at": "2026-09-15T11:43:38.440042+00:00",
+  "total_files": 2158,
+  "missing_expected_files": [],
+  "unexpected_files": [],
+  "contamination_findings": [
+    {
+      "path": ".pytest_cache",
+      "type": "Test cache or coverage artifact",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "saas_platform.db",
+      "type": "Runtime SQLite database file",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/durable_state.db",
+      "type": "Runtime SQLite database file",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/saas_platform.db",
+      "type": "Runtime SQLite database file",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/core/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/core/__pycache__/environment.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/core/__pycache__/startup_validator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/core/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/db/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/db/__pycache__/base_store.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/db/__pycache__/postgres_store.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/db/__pycache__/store_factory.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/db/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/execution/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/execution/__pycache__/agent_runtime.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/execution/__pycache__/durable_state.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/routes/__pycache__/artifacts.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/auth_core.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/auth_device.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/auth_helpers.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/auth_recovery.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/diff.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/health.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/platform_extensions.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/replay.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/tasks.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/workspace.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/routes/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/workspace/cli-26390e3b6291/.pytest_cache",
+      "type": "Test cache or coverage artifact",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/workspace/cli-26390e3b6291/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "backend/workspace/cli-26390e3b6291/__pycache__/fibonacci.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/workspace/cli-26390e3b6291/__pycache__/test_fibonacci.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/workspace/cli-26390e3b6291/__pycache__/test_fibonacci.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/__pycache__/app.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/__pycache__/auth_system.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/__pycache__/redis_layer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "backend/__pycache__/security.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/.pytest_cache",
+      "type": "Test cache or coverage artifact",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/api/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/api/__pycache__/client.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/api/__pycache__/contracts.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/api/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/artifacts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/artifacts/__pycache__/manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/artifacts/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/auth/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/auth/__pycache__/device_flow.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/auth/__pycache__/token_store.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/auth/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/artifacts.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/auth.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/config.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/diff.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/doctor.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/logs.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/task.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/version.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/workspace.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/commands/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/config/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/config/__pycache__/settings.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/config/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/execution/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/execution/__pycache__/lifecycle.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/execution/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/output/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/output/__pycache__/formatters.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/output/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/security/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/security/__pycache__/redaction.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/security/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/claude-mem/scripts/extraction/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/claude-mem/scripts/extraction/__pycache__/extract-all-xml.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/claude-mem/scripts/extraction/__pycache__/filter-actual-xml.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-datasets/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-datasets/scripts/__pycache__/dataset_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-datasets/scripts/__pycache__/sql_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/examples/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/examples/__pycache__/artificial_analysis_to_hub.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/evaluation_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/inspect_eval_uv.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/inspect_vllm_uv.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/lighteval_vllm_uv.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/run_eval_job.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/run_vllm_eval_job.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-evaluation/scripts/__pycache__/test_extraction.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/convert_to_gguf.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/dataset_inspector.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/estimate_cost.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/train_dpo_example.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/train_grpo_example.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/hugging-face-model-trainer/scripts/__pycache__/train_sft_example.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/imagen/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/imagen/scripts/__pycache__/generate_image.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/multi-agent-patterns/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/multi-agent-patterns/scripts/__pycache__/coordination.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/openai-image-gen/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/openai-image-gen/scripts/__pycache__/gen.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/openai-image-gen/scripts/__pycache__/test_gen.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/pytorch-lightning/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/pytorch-lightning/scripts/__pycache__/quick_trainer_setup.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/pytorch-lightning/scripts/__pycache__/template_datamodule.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/pytorch-lightning/scripts/__pycache__/template_lightning_module.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/scikit-learn/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/scikit-learn/scripts/__pycache__/classification_pipeline.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/ai-ml/scikit-learn/scripts/__pycache__/clustering_analysis.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/baidu-image-crawler/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/baidu-image-crawler/__pycache__/baidu_image_crawler.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/deep-research/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/deep-research/scripts/__pycache__/research.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/examples/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/examples/__pycache__/django_filter_backend.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/examples/__pycache__/fastapi_search.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/examples/__pycache__/sqlalchemy_search.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/scripts/__pycache__/generate_filter_query.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/implementing-search-filter/scripts/__pycache__/validate_search_params.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/matplotlib/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/matplotlib/scripts/__pycache__/plot_template.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/matplotlib/scripts/__pycache__/style_configurator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/sanjay-postgres/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/sanjay-postgres/scripts/__pycache__/query.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/statistical-analysis/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/statistical-analysis/scripts/__pycache__/assumption_checks.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/visualizing-data/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/visualizing-data/scripts/__pycache__/generate_color_palette.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/visualizing-data/scripts/__pycache__/process_data.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/data-analysis/visualizing-data/scripts/__pycache__/validate_accessibility.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/async_database_validation.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/basic_form.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/django_forms_example.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/fastapi_forms.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/flask_wtf_example.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/examples/python/__pycache__/pydantic_validation.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/references/python/examples/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/references/python/examples/__pycache__/basic_form.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/references/python/examples/__pycache__/pydantic_validation.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/scripts/__pycache__/generate_error_messages.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/scripts/__pycache__/generate_form_schema.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/scripts/__pycache__/validate_form_accessibility.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-forms/scripts/__pycache__/validate_form_data.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-tables/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-tables/scripts/__pycache__/export_table_data.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/building-tables/scripts/__pycache__/generate_mock_data.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__/calculate-kpi-metrics.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__/export-dashboard.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__/generate-dashboard-layout.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__/optimize-dashboard-performance.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/creating-dashboards/scripts/__pycache__/validate-widget-config.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/cli/assets/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/cli/assets/scripts/__pycache__/core.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/cli/assets/scripts/__pycache__/design_system.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/cli/assets/scripts/__pycache__/search.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/src/ui-ux-pro-max/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/src/ui-ux-pro-max/scripts/__pycache__/core.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/src/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/design/ui-ux-pro-max/src/ui-ux-pro-max/scripts/__pycache__/search.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/deploying-applications/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/deploying-applications/scripts/__pycache__/generate_k8s_manifests.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/deploying-applications/scripts/__pycache__/validate_deployment.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/git-workflow-management/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/git-workflow-management/scripts/__pycache__/git-stats-report.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/testing-strategies/examples/python/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/testing-strategies/examples/python/__pycache__/hypothesis_property_test.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/testing-strategies/examples/python/__pycache__/pytest_unit_test.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/writing-dockerfiles/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/development/writing-dockerfiles/scripts/__pycache__/validate_dockerfile.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/documentation/markdown-to-epub/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/documentation/markdown-to-epub/scripts/__pycache__/epub_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/documentation/markdown-to-epub/scripts/__pycache__/markdown_processor.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-calendar/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-calendar/scripts/__pycache__/auth.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-calendar/scripts/__pycache__/gcal.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-docs/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-docs/scripts/__pycache__/auth.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-docs/scripts/__pycache__/docs.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-drive/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-drive/scripts/__pycache__/auth.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-drive/scripts/__pycache__/drive.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-sheets/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-sheets/scripts/__pycache__/auth.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/google-sheets/scripts/__pycache__/sheets.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/secret-management/examples/dynamic-db-credentials/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/integrations/secret-management/examples/dynamic-db-credentials/__pycache__/python-hvac.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/ceo-advisor/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/ceo-advisor/scripts/__pycache__/financial_scenario_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/ceo-advisor/scripts/__pycache__/strategy_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/cto-advisor/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/cto-advisor/scripts/__pycache__/team_scaling_calculator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/c-level-advisor/cto-advisor/scripts/__pycache__/tech_debt_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/aws-solution-architect/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/aws-solution-architect/scripts/__pycache__/architecture_designer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/aws-solution-architect/scripts/__pycache__/cost_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/aws-solution-architect/scripts/__pycache__/serverless_stack.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/code-reviewer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/code-reviewer/scripts/__pycache__/code_quality_checker.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/code-reviewer/scripts/__pycache__/pr_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/code-reviewer/scripts/__pycache__/review_report_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/ms365-tenant-manager/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/ms365-tenant-manager/scripts/__pycache__/powershell_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/ms365-tenant-manager/scripts/__pycache__/tenant_setup.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/ms365-tenant-manager/scripts/__pycache__/user_management.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-architect/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-architect/scripts/__pycache__/architecture_diagram_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-architect/scripts/__pycache__/dependency_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-architect/scripts/__pycache__/project_architect.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-backend/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-backend/scripts/__pycache__/api_load_tester.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-backend/scripts/__pycache__/api_scaffolder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-backend/scripts/__pycache__/database_migration_tool.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-computer-vision/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-computer-vision/scripts/__pycache__/dataset_pipeline_builder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-computer-vision/scripts/__pycache__/inference_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-computer-vision/scripts/__pycache__/vision_model_trainer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-engineer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-engineer/scripts/__pycache__/data_quality_validator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-engineer/scripts/__pycache__/etl_performance_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-engineer/scripts/__pycache__/pipeline_orchestrator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-scientist/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-scientist/scripts/__pycache__/experiment_designer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-scientist/scripts/__pycache__/feature_engineering_pipeline.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-data-scientist/scripts/__pycache__/model_evaluation_suite.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-devops/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-devops/scripts/__pycache__/deployment_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-devops/scripts/__pycache__/pipeline_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-devops/scripts/__pycache__/terraform_scaffolder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-frontend/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-frontend/scripts/__pycache__/bundle_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-frontend/scripts/__pycache__/component_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-frontend/scripts/__pycache__/frontend_scaffolder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-fullstack/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-fullstack/scripts/__pycache__/code_quality_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-fullstack/scripts/__pycache__/project_scaffolder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-ml-engineer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-ml-engineer/scripts/__pycache__/ml_monitoring_suite.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-ml-engineer/scripts/__pycache__/model_deployment_pipeline.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-ml-engineer/scripts/__pycache__/rag_system_builder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-prompt-engineer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-prompt-engineer/scripts/__pycache__/agent_orchestrator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-prompt-engineer/scripts/__pycache__/prompt_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-prompt-engineer/scripts/__pycache__/rag_evaluator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-qa/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-qa/scripts/__pycache__/coverage_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-qa/scripts/__pycache__/e2e_test_scaffolder.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-qa/scripts/__pycache__/test_suite_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-secops/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-secops/scripts/__pycache__/compliance_checker.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-secops/scripts/__pycache__/security_scanner.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-secops/scripts/__pycache__/vulnerability_assessor.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-security/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-security/scripts/__pycache__/secret_scanner.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/senior-security/scripts/__pycache__/threat_modeler.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/coverage_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/fixture_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/format_detector.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/framework_adapter.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/metrics_calculator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/output_formatter.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/tdd_workflow.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tdd-guide/scripts/__pycache__/test_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/ecosystem_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/format_detector.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/migration_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/report_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/security_assessor.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/stack_comparator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/engineering-team/tech-stack-evaluator/scripts/__pycache__/tco_calculator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/ab_test_planner.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/aso_scorer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/competitor_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/keyword_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/launch_checklist.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/localization_helper.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/metadata_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/app-store-optimization/scripts/__pycache__/review_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/content-creator/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/content-creator/scripts/__pycache__/brand_voice_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/content-creator/scripts/__pycache__/seo_optimizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/marketing-demand-acquisition/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/marketing-demand-acquisition/scripts/__pycache__/calculate_cac.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/social-media-analyzer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/social-media-analyzer/scripts/__pycache__/analyze_performance.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/marketing-skill/social-media-analyzer/scripts/__pycache__/calculate_metrics.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/model-usage/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/model-usage/scripts/__pycache__/model_usage.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/model-usage/scripts/__pycache__/test_model_usage.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/nano-banana-pro/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/nano-banana-pro/scripts/__pycache__/generate_image.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/lib/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/lib/__pycache__/validators.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/lib/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/__pycache__/check_dependencies.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/__pycache__/emoji_utils.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/__pycache__/generate_favicons.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/others/web-asset-generator/scripts/__pycache__/generate_og_images.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/planning-with-files/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/planning-with-files/scripts/__pycache__/session-catchup.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/agile-product-owner/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/agile-product-owner/scripts/__pycache__/user_story_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/product-manager-toolkit/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/product-manager-toolkit/scripts/__pycache__/customer_interview_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/product-manager-toolkit/scripts/__pycache__/rice_prioritizer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/product-strategist/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/product-strategist/scripts/__pycache__/okr_cascade_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/ui-design-system/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/ui-design-system/scripts/__pycache__/design_token_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/ux-researcher-designer/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/pm-product/product-team/ux-researcher-designer/scripts/__pycache__/persona_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/tests/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/tests/test_samples/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/tests/test_samples/__pycache__/vulnerable.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/tests/__pycache__/test_analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/tests/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/__pycache__/analyzer.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/__pycache__/script_analyzers.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/security-testing/constant-time-analysis/ct_analyzer/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/context-fundamentals/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/context-fundamentals/scripts/__pycache__/context_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/mcp-builder/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/mcp-builder/scripts/__pycache__/connections.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/mcp-builder/scripts/__pycache__/evaluation.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/memory-systems/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/memory-systems/scripts/__pycache__/memory_store.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/ask_question.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/auth_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/browser_session.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/browser_utils.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/cleanup_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/config.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/notebook_manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/run.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/setup_environment.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/notebooklm-skill/scripts/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skill-creator/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skill-creator/scripts/__pycache__/init_skill.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skill-creator/scripts/__pycache__/package_skill.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skill-creator/scripts/__pycache__/quick_validate.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skills-updater/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/skills-updater/scripts/__pycache__/check_updates.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/tool-design/scripts/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/skills/tool-development/tool-design/scripts/__pycache__/description_generator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/tui/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/tui/__pycache__/gateway.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/tui/__pycache__/skill_creator.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/tui/__pycache__/state.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/tui/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/workspace/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/aetherion_cli/workspace/__pycache__/manager.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/workspace/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/__pycache__/client.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/__pycache__/main.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/aetherion_cli/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_cli.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_client_streaming.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_p0_tui_streaming.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_replay_cli.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_skill_creator.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/test_tui_state.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "cli/tests/__pycache__/__init__.cpython-314.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "tests/integration/__pycache__",
+      "type": "Python bytecode cache",
+      "remediation": "Delete directory"
+    },
+    {
+      "path": "tests/integration/__pycache__/test_autonomous_runtime.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "tests/integration/__pycache__/test_phase15_closure.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    },
+    {
+      "path": "tests/integration/__pycache__/test_provider_adapters.cpython-314-pytest-9.1.1.pyc",
+      "type": "Python bytecode cache",
+      "remediation": "Delete file"
+    }
+  ],
+  "status": "FAILED"
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "test": "Login: Email/Password Form Exists",
+    "status": "PASS",
+    "detail": "email=True, pass=True, submit=True"
+  },
+  {
+    "test": "Login: Google OAuth Button Exists",
+    "status": "PASS",
+    "detail": "a[href='/api/auth/google'] visible"
+  },
+  {
+    "test": "Login: GitHub OAuth Button Exists",
+    "status": "PASS",
+    "detail": "a[href='/api/auth/github'] visible"
+  },
+  {
+    "test": "Register: Form Inputs & Submit Exist",
+    "status": "PASS",
+    "detail": "name=True, email=True, pass=True"
+  },
+  {
+    "test": "Register: Google OAuth Button Exists",
+    "status": "PASS",
+    "detail": "a[href='/api/auth/google'] visible"
+  },
+  {
+    "test": "Register: GitHub OAuth Button Exists",
+    "status": "PASS",
+    "detail": "a[href='/api/auth/github'] visible"
+  },
+  {
+    "test": "GitHub OAuth Button Click & Navigation",
+    "status": "PASS",
+    "detail": "Redirect URL: https://github.com/login?client_id=Ov23liAetherionDevClient9921&return_to=%2Flog..."
+  },
+  {
+    "test": "GitHub OAuth Parameters Validated",
+    "status": "PASS",
+    "detail": "client_id=Ov23liAetherionDevClient9921, state=9e446d53ff..., scope=read:user user:email"
+  },
+  {
+    "test": "GitHub OAuth Cancel Consent Error Banner",
+    "status": "PASS",
+    "detail": "Error displayed: 'Authentication error: access_denied'"
+  },
+  {
+    "test": "GitHub OAuth Forged State Rejection",
+    "status": "PASS",
+    "detail": "Error displayed: 'Authentication error: invalid_state'"
+  },
+  {
+    "test": "GitHub OAuth Missing Code Handling",
+    "status": "PASS",
+    "detail": "Error displayed: 'Authentication error: github_token_failed'"
+  },
+  {
+    "test": "GitHub OAuth Token Exchange Failure Display",
+    "status": "PASS",
+    "detail": "Error displayed: 'Authentication error: github_token_failed'"
+  },
+  {
+    "test": "New GitHub User Created in DB",
+    "status": "PASS",
+    "detail": "DB User: id=12, email=gh_dev_1180cf@example.com, provider=github"
+  },
+  {
+    "test": "New GitHub User JWT Stored in localStorage",
+    "status": "PASS",
+    "detail": "JWT length: 277"
+  },
+  {
+    "test": "New GitHub User Email Displayed in Portal",
+    "status": "PASS",
+    "detail": "Found gh_dev_1180cf@example.com in Identity Portal"
+  },
+  {
+    "test": "Session Persists Across Browser Reload",
+    "status": "PASS",
+    "detail": "Token intact after page reload"
+  },
+  {
+    "test": "Protected Home Route Accessible While Authenticated",
+    "status": "PASS",
+    "detail": "Current URL: http://localhost:3000/"
+  },
+  {
+    "test": "Logout Clears localStorage JWT",
+    "status": "PASS",
+    "detail": "Token after logout: None"
+  },
+  {
+    "test": "Unauthenticated Route Redirects to /login",
+    "status": "PASS",
+    "detail": "Redirected to: http://localhost:3000/login"
+  },
+  {
+    "test": "Initial Account Registered",
+    "status": "PASS",
+    "detail": "User ID: 13, provider=local"
+  },
+  {
+    "test": "Account Linking Resolves to Same User ID",
+    "status": "PASS",
+    "detail": "Original UID 13 == Linked UID 13 (no duplicate account created)"
+  },
+  {
+    "test": "Account Linking Updates Provider to GitHub",
+    "status": "PASS",
+    "detail": "Provider successfully updated to: github"
+  },
+  {
+    "test": "Linked Account Successfully Enters Identity Portal",
+    "status": "PASS",
+    "detail": "Identity Portal verified for lead_dev_ee5bae@example.com"
+  },
+  {
+    "test": "Repeat GitHub Login Resolves Same User ID",
+    "status": "PASS",
+    "detail": "User ID preserved across logins: 12"
+  },
+  {
+    "test": "Repeat Login Re-enters Identity Portal",
+    "status": "PASS",
+    "detail": "User email found in active session"
+  },
+  {
+    "test": "Google OAuth Login Parity",
+    "status": "PASS",
+    "detail": "Google login navigation: https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S353487326%3..."
+  },
+  {
+    "test": "Google OAuth Register Parity",
+    "status": "PASS",
+    "detail": "Google register navigation: https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S673575797%3..."
+  }
+]

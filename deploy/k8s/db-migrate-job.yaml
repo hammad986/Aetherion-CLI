@@ -1,0 +1,72 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  # The release orchestrator renders a unique release label and uses
+  # generateName so an old completed Job can never satisfy a new release.
+  generateName: aetherion-db-migrate-
+  namespace: aetherion
+  labels:
+    app: aetherion-db-migrate
+    app.kubernetes.io/name: aetherion
+    app.kubernetes.io/component: db-migration
+    app.kubernetes.io/part-of: aetherion-platform
+    aetherion.io/release-id: "__AETHERION_RELEASE_ID__"
+spec:
+  parallelism: 1
+  completions: 1
+  backoffLimit: 1
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels:
+        app: aetherion-db-migrate
+        app.kubernetes.io/name: aetherion
+        app.kubernetes.io/component: db-migration
+        app.kubernetes.io/part-of: aetherion-platform
+        aetherion.io/release-id: "__AETHERION_RELEASE_ID__"
+    spec:
+      restartPolicy: Never
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: db-migrate
+          image: aetherion/backend:1.0.0
+          imagePullPolicy: IfNotPresent
+          workingDir: /app/workspace
+          command: ["python", "/app/scripts/db_migrate.py", "--up"]
+          env:
+            - name: ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: aetherion-config
+                  key: ENVIRONMENT
+            - name: AETHERION_RELEASE_SCOPE
+              valueFrom:
+                configMapKeyRef:
+                  name: aetherion-config
+                  key: AETHERION_RELEASE_SCOPE
+            - name: AETHERION_EXECUTION_DISABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: aetherion-config
+                  key: AETHERION_EXECUTION_DISABLED
+            - name: PYTHONPATH
+              value: /app
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: aetherion-secrets
+                  key: DATABASE_URL
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aetherion-secrets
+                  key: SECRET_KEY
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: aetherion-secrets
+                  key: JWT_SECRET

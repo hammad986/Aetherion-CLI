@@ -1,0 +1,108 @@
+{
+  "total_tests": 14,
+  "passed": 14,
+  "failed": 0,
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 401 (UNAUTHORIZED)"
+  ],
+  "tests": [
+    {
+      "route": "/",
+      "test": "Unauthenticated redirect to /login",
+      "expected": "Redirects to /login",
+      "actual": "http://127.0.0.1:3000/login",
+      "result": "PASS"
+    },
+    {
+      "route": "/login",
+      "test": "Login page controls and OAuth buttons",
+      "expected": "Email, password, Google and GitHub buttons visible",
+      "actual": "All 4 authentication controls present and active",
+      "result": "PASS"
+    },
+    {
+      "route": "/login",
+      "test": "Invalid credentials error handling",
+      "expected": "Error message displayed without page crash",
+      "actual": "Error visible: True",
+      "result": "PASS"
+    },
+    {
+      "route": "/register",
+      "test": "Register page controls and OAuth buttons",
+      "expected": "Registration form with Google and GitHub options",
+      "actual": "All inputs and OAuth options active",
+      "result": "PASS"
+    },
+    {
+      "route": "/recovery",
+      "test": "Password recovery page",
+      "expected": "Email input and recovery action",
+      "actual": "Recovery view rendered successfully",
+      "result": "PASS"
+    },
+    {
+      "route": "/reset-password",
+      "test": "Reset password route alias",
+      "expected": "Resolves to Recovery view",
+      "actual": "Rendered RecoveryPage",
+      "result": "PASS"
+    },
+    {
+      "route": "/activate",
+      "test": "Device authorization code input page",
+      "expected": "Code entry inputs for CLI device linking",
+      "actual": "DeviceAuthPage rendered with code inputs",
+      "result": "PASS"
+    },
+    {
+      "route": "/terms",
+      "test": "Terms of Service page",
+      "expected": "Terms agreement view rendered",
+      "actual": "TermsPage rendered with legal clauses",
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy",
+      "test": "Privacy Policy page",
+      "expected": "Privacy Policy view rendered",
+      "actual": "PrivacyPage rendered with privacy policy text",
+      "result": "PASS"
+    },
+    {
+      "route": "/",
+      "test": "Authenticated Dashboard Access & Session",
+      "expected": "Logged in as admin@aetherion.ai with CLI instructions",
+      "actual": "Protected dashboard rendered with user details",
+      "result": "PASS"
+    },
+    {
+      "route": "/",
+      "test": "Session persistence across browser reload",
+      "expected": "Session maintained via localStorage / token",
+      "actual": "Dashboard remained authenticated after reload",
+      "result": "PASS"
+    },
+    {
+      "route": "/logout",
+      "test": "Logout execution, token clearance, and re-login link",
+      "expected": "Displays Signed Out, purges token, links to /login",
+      "actual": "Token purged, redirected to http://127.0.0.1:3000/login",
+      "result": "PASS"
+    },
+    {
+      "route": "/login (Mobile)",
+      "test": "Mobile viewport rendering (375x667)",
+      "expected": "Responsive layout without overflow or broken controls",
+      "actual": "Mobile UI fully aligned and interactive",
+      "result": "PASS"
+    },
+    {
+      "route": "/login (Keyboard)",
+      "test": "Keyboard accessibility (Tab focus and Enter submit)",
+      "expected": "Form navigates and submits via keyboard",
+      "actual": "Successfully authenticated via keyboard navigation",
+      "result": "PASS"
+    }
+  ]
+}
